@@ -43,7 +43,7 @@ def check_connection_server(sc, response, client):
             from_ = '+13613015329',  # номер, который был получен
             to = '+380997730476',  # твой номер, на который придёт sms
         )
-        LOG.info('Сообщение отправлено')
+        LOG.info('Message sent')
         exit(-1)
     sc.enter(10, 1, check_connection_server, (sc, response, client))
 
