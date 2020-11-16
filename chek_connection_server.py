@@ -36,7 +36,7 @@ def init_connect_to_server(client):
         exit(-1)
 
 def check_connection_server(sc, response, client): 
-    if response.status_code == 200:
+    if response.status_code != 200:
         url = response.url
         message = client.messages.create(    
             body = f'Server connection - {url} disconnected',  # текст сообщения
