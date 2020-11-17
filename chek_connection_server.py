@@ -45,7 +45,7 @@ def check_connection_server(sc, response, client):
         )
         LOG.info('Message sent')
         exit(-1)
-    sc.enter(10, 1, check_connection_server, (sc, response, client))
+    sc.enter(60, 1, check_connection_server, (sc, response, client))
 
 if __name__ == '__main__':
     building_log()
